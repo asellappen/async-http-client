@@ -5,9 +5,10 @@ import os.path
 import xml.dom.minidom
  
 homedir = os.path.expanduser("~")
- 
+  print('My payj aru is: '  homedir )
+  print('My file aru is: '  homedir + '/.m2/settings.xml' )
 m2 = xml.dom.minidom.parse(homedir + '/.m2/settings.xml')
- print('My payj aru is: '  m2 )
+
 settings = m2.getElementsByTagName("settings")[0]
  
 serversNodes = settings.getElementsByTagName("servers")
